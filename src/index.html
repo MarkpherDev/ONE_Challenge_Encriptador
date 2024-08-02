@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/output.css" />
+		<title>Challengge Encriptador</title>
+	</head>
+	<body>
+		<div
+			class="flex flex-col min-h-screen p-4 bg-[#f5f7fa] md:flex-row md:space-x-8">
+			<div
+				class="flex flex-col items-center justify-center flex-1 p-8 space-y-8 bg-white rounded-lg shadow-md md:w-1/2">
+				<div class="text-4xl font-bold text-[#1a3d7c]">a</div>
+				<h1 class="text-2xl font-medium text-[#1a3d7c]">
+					Ingrese el texto aqui
+				</h1>
+				<textarea
+					placeholder="Ingrese el texto aqui"
+					class="w-full p-4 text-xl border rounded-lg resize-none" id="text-area"></textarea>
+				<div class="flex items-center space-x-2 text-sm text-gray-500">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="h-4 w-4">
+						<circle cx="12" cy="12" r="10"></circle>
+						<path d="M12 16v-4"></path>
+						<path d="M12 8h.01"></path>
+					</svg>
+					<span>Solo letras minúsculas y sin acentos</span>
+				</div>
+				<div class="flex space-x-4">
+					<button
+						class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none hover:bg-primary/90 h-10 px-6 py-3 text-white bg-[#1a3d7c] rounded-lg hover:opacity-95"
+						id="btn-encriptar">
+						Encriptar
+					</button>
+					<button
+						class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none bg-primary hover:bg-primary/90 h-10 px-6 py-3 text-[#1a3d7c] border border-[#1a3d7c] rounded-lg hover:opacity-80"
+						id="btn-desencriptar">
+						Desencriptar
+					</button>
+          <button
+						class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none bg-primary hover:bg-primary/90 h-10 px-6 py-3 text-[#1a3d7c] border border-[#1a3d7c] rounded-lg hover:opacity-80"
+						id="btn-limpiar">
+						Limpiar
+					</button>
+				</div>
+			</div>
+			<div
+				class="flex bg-white rounded-lg shadow-md md:w-1/2">
+				<div class="flex flex-col justify-center items-center flex-1 p-8 space-y-8" id="placeholder-image">
+					<img
+						src="./images/placeholder.svg"
+						alt="Illustration"
+						class="w-48 h-48"
+						width="200"
+						height="200"
+						style="aspect-ratio: 200 / 200; object-fit: cover" />
+					<h1 class="font-bold justify-center">
+						Ningún mensaje fue encontrado
+					</h1>
+					<p class="opacity-70">
+						Ingresa el texto que desees encriptar o desencriptar.
+					</p>
+				</div>
+        <div class="flex flex-col justify-center items-center flex-1 p-8 space-y-8 hidden" id="resultado">
+          <p id="text-resultado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum cumque numquam perferendis pariatur porro repudiandae iste recusandae id natus accusamus voluptates commodi odit amet, distinctio necessitatibus tenetur, sint ipsum.
+          Voluptate, hic iusto adipisci corrupti blanditiis aut non sunt rerum cumque quis possimus impedit accusantium rem expedita fuga harum omnis nesciunt minus consequuntur repellat! Deleniti placeat corporis illo a iusto.
+          Soluta ad possimus a dolorem accusantium earum perspiciatis nam quasi eveniet, reiciendis accusamus nulla doloremque commodi fugiat nisi illum! Dicta quia at perferendis a aliquam ipsam quos nostrum eos provident.
+          Sequi officiis, necessitatibus architecto nemo non dolore soluta voluptatem delectus error voluptatibus doloribus harum fugit magnam aliquam quas, facere explicabo velit qui animi earum odit, cumque quisquam iusto. Natus, repellat.
+          Iure amet ipsam perferendis eos doloribus quisquam, suscipit repellendus tempore ab, ratione, modi nam. Velit, eligendi tempora consequatur eius itaque cupiditate similique autem ea! Expedita ipsam ratione labore debitis ut.</p>
+          <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none bg-primary hover:bg-primary/90 h-10 px-6 py-3 text-[#1a3d7c] border border-[#1a3d7c] rounded-lg hover:opacity-80" id="btn-copiar">Copiar</button>
+        </div>
+			</div>
+		</div>
+	</body>
+  <script src="scripts/index.js"></script>
+</html>
